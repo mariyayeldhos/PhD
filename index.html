@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond the Band — A Doctoral Journey | University of Leicester</title>
+<meta name="description" content="Doctoral research exploring the career progression of ethnic minority Allied Health Professionals within the NHS in England.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Source+Serif+4:opsz,ital,wght@8..60,0,300..700;8..60,1,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#122641;          /* deep NHS-adjacent navy */
+  --ink-soft:#3c526e;
+  --paper:#f5f7f6;        /* cool clinical off-white */
+  --card:#ffffff;
+  --nhs:#005EB8;          /* NHS blue */
+  --leicester:#9d2235;    /* Leicester oxblood */
+  --gold:#d99a1b;         /* progression gold */
+  --line:#d8dee2;
+  --radius:14px;
+  --max:1120px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Source Serif 4',Georgia,serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.65;
+  font-size:17px;
+}
+h1,h2,h3,.display{font-family:'Bricolage Grotesque',sans-serif;line-height:1.1;letter-spacing:-.01em}
+.mono{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+a{color:var(--nhs)}
+img{max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+/* ---------- nav ---------- */
+nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(245,247,246,.92);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand-mark{width:26px;height:26px;flex:none}
+.brand span{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1rem}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{font-family:'Bricolage Grotesque',sans-serif;font-size:.88rem;font-weight:500;text-decoration:none;color:var(--ink-soft)}
+.nav-links a:hover{color:var(--nhs)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-family:'Bricolage Grotesque',sans-serif;cursor:pointer}
+
+/* ---------- hero ---------- */
+header.hero{padding:72px 0 0;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:end}
+.eyebrow{color:var(--leicester);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--leicester);display:inline-block}
+h1{font-size:clamp(2.4rem,5.4vw,4.2rem);font-weight:750;margin-bottom:22px}
+h1 em{font-style:normal;color:var(--nhs)}
+.lede{font-size:1.18rem;color:var(--ink-soft);max-width:34em;margin-bottom:30px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:56px}
+.btn{display:inline-block;padding:13px 26px;border-radius:999px;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:.95rem;text-decoration:none;transition:transform .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--nhs);color:#fff}
+.btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
+
+/* signature: the band staircase */
+.bands{position:relative;padding-bottom:0}
+.bands svg{display:block;width:100%;height:auto}
+.bands figcaption{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--ink-soft);letter-spacing:.08em;padding:10px 2px 26px;text-transform:uppercase}
+
+/* ---------- section scaffolding ---------- */
+section{padding:88px 0}
+.sec-head{display:grid;grid-template-columns:220px 1fr;gap:32px;margin-bottom:44px;align-items:start}
+.sec-head .mono{color:var(--nhs);padding-top:8px}
+.sec-head h2{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:700;max-width:18em}
+.alt{background:var(--ink);color:#e8edf2}
+.alt .sec-head .mono{color:var(--gold)}
+.alt h2,.alt h3{color:#fff}
+.alt a{color:#8fc1ee}
+
+/* ---------- research cards ---------- */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;position:relative}
+.card h3{font-size:1.12rem;margin:14px 0 10px}
+.card p{font-size:.96rem;color:var(--ink-soft)}
+.chip{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--nhs)}
+.card.q{border-top:4px solid var(--nhs)}
+.card.q:nth-child(2){border-top-color:var(--gold)}
+.card.q:nth-child(3){border-top-color:var(--leicester)}
+
+/* ---------- context / why it matters ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split p+p{margin-top:16px}
+.pull{border-left:4px solid var(--gold);padding:6px 0 6px 22px;font-family:'Bricolage Grotesque',sans-serif;font-size:1.35rem;font-weight:600;line-height:1.35;margin:26px 0;color:#fff}
+.fact-list{list-style:none;display:grid;gap:14px}
+.fact-list li{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:18px 20px;font-size:.98rem}
+.fact-list .mono{color:var(--gold);display:block;margin-bottom:6px}
+
+/* ---------- timeline ---------- */
+.timeline{position:relative;margin-left:8px}
+.timeline::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--nhs),var(--gold))}
+.milestone{position:relative;padding:0 0 44px 38px}
+.milestone:last-child{padding-bottom:0}
+.milestone::before{content:"";position:absolute;left:-7px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:3px solid var(--nhs)}
+.milestone.done::before{background:var(--nhs)}
+.milestone.now::before{border-color:var(--gold);background:var(--gold);box-shadow:0 0 0 6px rgba(217,154,27,.18)}
+.milestone .mono{color:var(--ink-soft)}
+.milestone h3{font-size:1.15rem;margin:6px 0 8px}
+.milestone p{color:var(--ink-soft);max-width:46em;font-size:.97rem}
+.status{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border-radius:999px;margin-left:10px;vertical-align:2px}
+.status.done{background:#e2ecf7;color:var(--nhs)}
+.status.now{background:#f9edd2;color:#8a6410}
+.status.next{background:#eee;color:#666}
+
+/* ---------- methodology ---------- */
+.method-steps{counter-reset:step;display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 26px 26px 74px;position:relative}
+.step::before{
+  counter-increment:step;content:counter(step,decimal-leading-zero);
+  position:absolute;left:24px;top:26px;
+  font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--gold);font-weight:500;
+}
+.step h3{font-size:1.05rem;margin-bottom:8px}
+.step p{font-size:.94rem;color:var(--ink-soft)}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:300px 1fr;gap:52px;align-items:start}
+.portrait{
+  aspect-ratio:4/5;border-radius:var(--radius);
+  background:
+    linear-gradient(160deg,rgba(0,94,184,.16),rgba(157,34,53,.14)),
+    repeating-linear-gradient(45deg,transparent 0 12px,rgba(18,38,65,.05) 12px 13px),
+    var(--card);
+  border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;color:var(--ink-soft);
+  font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:20px;
+}
+.about-copy p+p{margin-top:16px}
+.affil{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+
+/* ---------- participate ---------- */
+.participate-box{
+  background:linear-gradient(135deg,var(--nhs),#003e7c);
+  color:#fff;border-radius:20px;padding:56px;display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center;
+}
+.participate-box h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:14px;color:#fff}
+.participate-box p{color:#d6e5f5;max-width:36em}
+.participate-box .btn-primary{background:var(--gold);color:var(--ink)}
+.criteria{list-style:none;display:grid;gap:10px;font-size:.95rem}
+.criteria li{padding-left:26px;position:relative;color:#eaf2fb}
+.criteria li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-family:'Bricolage Grotesque',sans-serif;font-weight:700}
+
+/* ---------- blog placeholders ---------- */
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.post{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-decoration:none;color:var(--ink);display:block;transition:transform .15s ease,box-shadow .15s ease}
+.post:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(18,38,65,.10)}
+.post-band{height:8px;background:linear-gradient(90deg,var(--nhs),var(--gold))}
+.post-body{padding:24px}
+.post h3{font-size:1.05rem;margin:10px 0 8px}
+.post p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ---------- footer ---------- */
+footer{background:#0c1a2e;color:#9fb2c9;padding:56px 0 40px;font-size:.92rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:36px}
+footer h3{color:#fff;font-size:1rem;margin-bottom:12px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{color:#9fb2c9;text-decoration:none}
+footer a:hover{color:#fff}
+.foot-note{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;font-size:.8rem;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .btn:hover,.post:hover{transform:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .hero-grid,.split,.about-grid,.participate-box,.method-steps{grid-template-columns:1fr}
+  .grid-3,.posts,.foot-grid{grid-template-columns:1fr 1fr}
+  .sec-head{grid-template-columns:1fr;gap:10px}
+  .participate-box{padding:36px}
+}
+@media (max-width:600px){
+  .grid-3,.posts,.foot-grid{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;padding:18px 24px;gap:16px}
+  .nav-links.open{display:flex}
+  .menu-btn{display:block}
+  section{padding:64px 0}
+}
+</style>
+</head>
+<body>
+
+<nav aria-label="Main navigation">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="17" width="6" height="8" fill="#005EB8"/><rect x="10" y="11" width="6" height="14" fill="#9d2235"/><rect x="19" y="3" width="6" height="22" fill="#d99a1b"/></svg>
+      <span>Beyond the Band</span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="navlinks" onclick="toggleMenu(this)">Menu</button>
+    <ul class="nav-links" id="navlinks">
+      <li><a href="#research">The research</a></li>
+      <li><a href="#why">Why it matters</a></li>
+      <li><a href="#journey">The journey</a></li>
+      <li><a href="#about">About me</a></li>
+      <li><a href="#participate">Take part</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="mono eyebrow">Doctoral research · University of Leicester</p>
+      <h1>Who gets to rise? Career progression of ethnic minority <em>AHPs</em> in the NHS in England.</h1>
+      <p class="lede">A doctoral study exploring the experiences, barriers and enablers shaping the career journeys of ethnic minority Allied Health Professionals — and what an equitable NHS workforce could look like.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#research">Explore the research</a>
+        <a class="btn btn-ghost" href="#participate">Take part in the study</a>
+      </div>
+    </div>
+    <figure class="bands" aria-label="Illustration of NHS Agenda for Change bands 5 to 9 as an ascending staircase, with representation narrowing at senior bands">
+      <svg viewBox="0 0 520 340" role="img">
+        <defs>
+          <linearGradient id="g" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0" stop-color="#005EB8"/><stop offset="1" stop-color="#d99a1b"/>
+          </linearGradient>
+        </defs>
+        <!-- staircase of bands -->
+        <rect x="10"  y="250" width="88" height="80" rx="6" fill="#005EB8"/>
+        <rect x="112" y="205" width="88" height="125" rx="6" fill="#2e77c4"/>
+        <rect x="214" y="158" width="88" height="172" rx="6" fill="#5b90cf"/>
+        <rect x="316" y="108" width="88" height="222" rx="6" fill="#8aaad9"/>
+        <rect x="418" y="52"  width="88" height="278" rx="6" fill="#c3cfe3"/>
+        <!-- narrowing representation line -->
+        <path d="M54 240 L156 200 L258 170 L360 160 L462 160" fill="none" stroke="#d99a1b" stroke-width="4" stroke-linecap="round" stroke-dasharray="0"/>
+        <path d="M54 240 L156 210 L258 205 L360 230 L462 275" fill="none" stroke="#9d2235" stroke-width="4" stroke-linecap="round" stroke-dasharray="7 7"/>
+        <circle cx="54" cy="240" r="7" fill="#d99a1b"/>
+        <circle cx="462" cy="160" r="7" fill="#d99a1b"/>
+        <circle cx="462" cy="275" r="7" fill="#9d2235"/>
+        <!-- labels -->
+        <g font-family="IBM Plex Mono,monospace" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="500">
+          <text x="54"  y="312">B5</text>
+          <text x="156" y="312">B6</text>
+          <text x="258" y="312">B7</text>
+          <text x="360" y="312">B8</text>
+          <text x="462" y="312">B9</text>
+        </g>
+        <g font-family="IBM Plex Mono,monospace" font-size="11" fill="#122641">
+          <text x="16" y="20">— all AHP staff</text>
+          <text x="16" y="38" fill="#9d2235">- - ethnic minority AHPs</text>
+        </g>
+      </svg>
+      <figcaption>Fig. 01 — The staircase narrows: representation across Agenda for Change bands (illustrative)</figcaption>
+    </figure>
+  </div>
+</header>
+
+<section id="research">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="mono">01 · The research</p>
+      <h2>Three questions drive this doctorate.</h2>
+    </div>
+    <div class="grid-3">
+      <article class="card q reveal">
+        <span class="chip">RQ1 · Experience</span>
+        <h3>What are the lived experiences?</h3>
+        <p>How do ethnic minority AHPs across the fourteen allied health professions describe their career journeys within the NHS in England — from entry through to senior and strategic roles?</p>
+      </article>
+      <article class="card q reveal">
+        <span class="chip">RQ2 · Barriers &amp; enablers</span>
+        <h3>What shapes progression?</h3>
+        <p>Which structural, cultural and interpersonal factors act as barriers or enablers — from recruitment and appraisal to mentorship, sponsorship, visibility and organisational culture?</p>
+      </article>
+      <article class="card q reveal">
+        <span class="chip">RQ3 · Change</span>
+        <h3>What needs to change?</h3>
+        <p>What can NHS organisations, professional bodies and policy-makers do differently to create equitable pathways into leadership for ethnic minority AHPs?</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="mono">02 · Why it matters</p>
+      <h2>The NHS is diverse. Its leadership is not — yet.</h2>
+    </div>
+    <div class="split">
+      <div class="reveal">
+        <p>Allied Health Professionals are the third largest clinical workforce in the NHS, spanning fourteen professions from physiotherapy and radiography to occupational therapy, podiatry and paramedicine. Ethnic minority colleagues make a vital contribution at every level of care.</p>
+        <p>Yet national workforce data has repeatedly shown that representation thins towards the senior Agenda for Change bands and strategic leadership roles. The talent is there; the pipeline leaks.</p>
+        <blockquote class="pull">Career progression is not just a personal ambition — it is a workforce, equity and patient-care issue.</blockquote>
+        <p>This study centres the voices of ethnic minority AHPs themselves, moving beyond the statistics to understand how careers are actually lived, negotiated and — too often — constrained.</p>
+      </div>
+      <ul class="fact-list reveal">
+        <li><span class="mono">Workforce</span>AHPs form the third largest clinical workforce in the NHS, across 14 distinct professions.</li>
+        <li><span class="mono">Representation</span>Ethnic minority staff remain under-represented at senior bands (8a–9) and in AHP leadership roles relative to the workforce overall.</li>
+        <li><span class="mono">Evidence gap</span>Most research on NHS workforce race equality focuses on medicine and nursing — AHP voices are comparatively under-explored.</li>
+        <li><span class="mono">Policy context</span>The Workforce Race Equality Standard (WRES) and NHS Long Term Workforce Plan make equitable progression a national priority.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="journey">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="mono">03 · The doctoral journey</p>
+      <h2>Following the milestones, sharing the process.</h2>
+    </div>
+    <div class="timeline">
+      <div class="milestone done reveal">
+        
+        <h3>Foundations &amp; literature review <span class="status done">Complete</span></h3>
+        <p>Registration at the University of Leicester, research training, and a systematic exploration of the literature on race, career progression and the allied health professions in the NHS.</p>
+      </div>
+      <div class="milestone done reveal">
+        
+        <h3>Research design &amp; ethics <span class="status done">Complete</span></h3>
+        <p>Refining the research questions, selecting the methodology, and securing university and NHS ethical approvals for work with NHS staff.</p>
+      </div>
+      <div class="milestone now reveal">
+        <p class="mono">Current phase</p>
+        <h3>Fieldwork &amp; data collection <span class="status now">In progress</span></h3>
+        <p>In-depth interviews with ethnic minority AHPs across England, capturing career narratives from early career through to senior leadership.</p>
+      </div>
+      <div class="milestone reveal">
+        
+        <h3>Analysis &amp; interpretation <span class="status next">Upcoming</span></h3>
+        <p>Thematic analysis of career narratives, member-checking with participants, and development of the study's core findings.</p>
+      </div>
+      <div class="milestone reveal">
+        
+        <h3>Thesis, viva &amp; dissemination <span class="status next">Upcoming</span></h3>
+        <p>Writing up, examination, and sharing findings with NHS organisations, professional bodies and the AHP community through publications, conferences and this site.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="participate">
+  <div class="wrap">
+    <div class="participate-box reveal" style="grid-template-columns:1fr">
+      <div>
+        <p class="mono" style="color:var(--gold);margin-bottom:10px">04 · Take part</p>
+        <h2>Your story could shape this research.</h2>
+        <p>If you are an ethnic minority AHP working in the NHS in England, I would love to hear about your career journey — the highs, the obstacles, and everything in between. Participation is voluntary, confidential and fully anonymised.</p>
+        <div class="cta-row" style="margin:26px 0 0">
+          <a class="btn btn-primary" href="https://app.onlinesurveys.jisc.ac.uk/s/leicester/ahps" target="_blank" rel="noopener">Take the online survey</a>
+          <a class="btn btn-ghost" style="border-color:#fff;color:#fff" href="mailto:my212@leicester.ac.uk?subject=Doctoral%20study%20—%20expression%20of%20interest">Express interest by email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="mono">05 · About me</p>
+    </div>
+    <div class="about-grid" style="grid-template-columns:1fr;max-width:760px">
+      <div class="about-copy reveal">
+        <p><strong>Mariya Yeldhos</strong> is a doctoral researcher at the University of Leicester. She completed her Masters in Healthcare Management at the University of Leicester in 2023 and received a Masters in Biomedical Engineering from Amrita University in India.</p>
+        <p>Her own journey through the masters dissertation sparked the questions at the heart of this doctorate: why do so many talented ethnic minority colleagues find the staircase steeper than it should be — and what would it take to change that?</p>
+        <div class="affil">
+          <span class="chip">University of Leicester</span>
+          <span class="chip">NHS England context</span>
+          <span class="chip">Allied Health Professions</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h3>Beyond the Band</h3>
+        <p>A doctoral research journey at the University of Leicester exploring the career progression of ethnic minority Allied Health Professionals within the NHS in England.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#research">The research</a></li>
+          <li><a href="#journey">The journey</a></li>
+            </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:my212@leicester.ac.uk">my212@leicester.ac.uk</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© 2026 Mariya Yeldhos · University of Leicester doctoral study</span>
+      <span>Views are my own and do not represent the NHS or the University.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(btn){
+  const links=document.getElementById('navlinks');
+  const open=links.classList.toggle('open');
+  btn.setAttribute('aria-expanded',open);
+}
+// close menu on link tap
+document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>{
+  document.getElementById('navlinks').classList.remove('open');
+}));
+// scroll reveal (respects reduced motion via CSS)
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
